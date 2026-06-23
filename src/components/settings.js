@@ -2,6 +2,8 @@
  * Settings modal — FRED API key management.
  */
 
+import { PROXY_BASE } from '../utils/constants.js';
+
 const LS_KEY = 'stock_tracker_fred_api_key';
 
 export function getFREDApiKey() {
@@ -49,7 +51,7 @@ export function initSettingsModal(onKeySet) {
     saveBtn.disabled = true;
     try {
       const res = await fetch(
-        `http://localhost:3001/api/fred?seriesId=SP500&apiKey=${encodeURIComponent(key)}&startDate=2024-01-01&endDate=2024-01-10`
+        `${PROXY_BASE}/api/fred?seriesId=SP500&apiKey=${encodeURIComponent(key)}&startDate=2024-01-01&endDate=2024-01-10`
       );
       const data = await res.json();
       if (data.error) throw new Error(data.error);

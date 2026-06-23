@@ -82,6 +82,6 @@ export const COMPARE_MODES = [
   { id: 'ppp',          label: 'PPP On / Off'     },
 ];
 
-// ─── API Configuration ───────────────────────────────────────────
-export const PROXY_BASE = 'http://localhost:3001';
+// ─── API endpoints ────────────────────────────────────────────────
+export const PROXY_BASE = import.meta.env.DEV ? 'http://localhost:3001' : '';
 export const FRANKFURTER_BASE = 'https://api.frankfurter.dev/v1';
