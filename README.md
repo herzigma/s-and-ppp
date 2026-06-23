@@ -1,4 +1,4 @@
-# S&P 500 PPP Comparison App
+# S&PPP
 
 This is a modern, responsive web application that visualizes major US market indexes (like the S&P 500, Dow Jones, and NASDAQ) and adjusts their returns for **Purchasing Power Parity (PPP)** across different global currencies. 
 
