@@ -119,8 +119,8 @@ app.use((req, res) => {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`\n✅ Proxy server running at http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`\n✅ Proxy server running at http://0.0.0.0:${PORT}`);
   console.log('   Routes:');
   console.log('   GET /api/fred   — FRED stock index data');
   console.log('   GET /api/ppp    — World Bank PPP data');
